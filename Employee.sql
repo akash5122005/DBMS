@@ -143,3 +143,48 @@ To call this procedure:
 
 CALL GetEmployeeSalary(101, @salary);
 SELECT @salary;
+
+
+output
+Dept Table
+
+Deptno	Dname	Loc	        DeptmanagerId
+10	    HR	    New York	1001
+20	    IT	    Chicago	    1003
+30	    Finance	Boston	    1005
+
+Employee Table
+
+EmpId	Empname	Sal	    Deptno
+1001	Alice	50000.0	10
+1002	Bob	    40000.0	10
+1003	Charlie	60000.0	20
+1004	David	55000.0	20
+1005	Eva   	70000.0	30
+    A)
+Deptno	EmployeeCount	AverageSalary
+10	2	45000.00
+20	2	57500.00
+30	1	70000.00
+
+B)
+Empname	Dname	Sal
+Alice	HR	    50000.0
+Bob	    HR    	40000.0
+Charlie	IT   	60000.0
+David	IT  	55000.0
+Eva   	Finance	70000.0
+
+C)
+EmployeeName	ManagerName
+Alice	        Alice
+Bob	            Alice
+Charlie       	Charlie
+David	        Charlie
+Eva	            Eva
+
+D)
+Output:
+
+@salary
+55000.0
